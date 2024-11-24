@@ -4,42 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cf485a4-d8ac-4aa4-972e-12afb9b21ed9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/DA.Result.sln" beforeDir="false" afterPath="$PROJECT_DIR$/DA.Results.sln" afterDir="false" />
+    <list default="true" id="5cf485a4-d8ac-4aa4-972e-12afb9b21ed9" name="Changes" comment="Complete rewrite of the Result philosophy.">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DA.Result/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DA.Result/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/Extensions/ResultExtensions.Bind.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/Extensions/ResultExtensions.Check.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/Extensions/ResultExtensions.CheckForEach.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/Extensions/ResultExtensions.CheckIf.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/Extensions/ResultExtensions.Combine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/Extensions/ResultExtensions.Compensate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/Extensions/ResultExtensions.Flatten.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/Extensions/ResultExtensions.Map.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/Extensions/ResultExtensions.Match.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/Extensions/ResultExtensions.Tap.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/Result.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/ResultFactoryMethods.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/ResultTypes/Failure/ExceptionResultType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/ResultTypes/Failure/FailureResultType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/ResultTypes/Failure/IFailureResultType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/ResultTypes/Failure/InvalidResultType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/ResultTypes/Failure/NotFoundResultType{TKey}.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/ResultTypes/IResultType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/ResultTypes/Success/ISuccessResultType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/ResultTypes/Success/SuccessResultType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/Results.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Result/Result{TValue}.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Results.Tests/BindTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests.Old/BindTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Results.Tests/CheckForEachTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests.Old/CheckForEachTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Results.Tests/CheckIfTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests.Old/CheckIfTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Results.Tests/CheckTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests.Old/CheckTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Results.Tests/CombineTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests.Old/CombineTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Results.Tests/CompensateTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests.Old/CompensateTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Results.Tests/FlattenTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests.Old/FlattenTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Results.Tests/ResultExtensionsTestBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests.Old/ResultExtensionsTestBase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Results.Tests/ResultFactoryMethodsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests.Old/ResultFactoryMethodsTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Results.Tests/ResultTypeCombiningTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests.Old/ResultTypeCombiningTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Results.Tests/Results.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests.Old/Results.Tests.Old.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Results.MinimalApi/Results.MinimalApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results.MinimalApi/Results.MinimalApi.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Results.Shouldly/FailureResultTestExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results.Shouldly/FailureResultTestExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Results.Shouldly/Results.Shouldly.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results.Shouldly/Results.Shouldly.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Results/IResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results/IResult.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Results/Issues/ConfirmationRequiredWarning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results/Issues/ConfirmationRequiredWarning.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Results/Results.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results/Results.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Results.Tests/Extensions/TapTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests/Extensions/TapTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Results.Tests/ResultTestBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests/ResultTestBase.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +50,7 @@
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="SWEA" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -93,6 +68,8 @@
   "keyToString": {
     "05570998-40ee-4827-b09d-0b94f9294602.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "d91bb601-522d-42a6-87f1-4eb0c18e703b.executor": "Debug",
+    "db800222-05c6-4e2a-a76a-c108ba246cdb.executor": "Debug",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/romke/source/repos/DutchAntimony/DA.Result/DA.Result.sln",
     "node.js.detected.package.eslint": "true",
@@ -100,11 +77,11 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.tabs",
+    "settings.editor.selected.configurable": "RiderNuGetOptionsPageId",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="05570998-40ee-4827-b09d-0b94f9294602" />
+  <component name="RunManager" selected="d91bb601-522d-42a6-87f1-4eb0c18e703b" />
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -117,8 +94,17 @@
       <workItem from="1732222548994" duration="83000" />
       <workItem from="1732270190062" duration="225000" />
       <workItem from="1732272320300" duration="24000" />
-      <workItem from="1732273460310" duration="21622000" />
+      <workItem from="1732273460310" duration="31847000" />
     </task>
+    <task id="LOCAL-00001" summary="Complete rewrite of the Result philosophy.">
+      <option name="closed" value="true" />
+      <created>1732445431069</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732445431069</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,7 +119,7 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 97% 18/555" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 99% 8/619" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -154,5 +140,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Complete rewrite of the Result philosophy." />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete rewrite of the Result philosophy." />
   </component>
 </project>

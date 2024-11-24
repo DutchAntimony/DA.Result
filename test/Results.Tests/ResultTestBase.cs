@@ -1,9 +1,12 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace DA.Results.Tests;
 
 /// <summary>
 /// Base test for all result tests.
 /// Contains many protected results and fields to make result testing easier.
 /// </summary>
+[ExcludeFromCodeCoverage(Justification = "Throwing should specifically not be hit.")]
 public abstract class ResultTestBase
 {
     protected readonly Result<Result.NoContent> SuccessResult = Result.Ok();
@@ -25,6 +28,7 @@ public abstract class ResultTestBase
     protected Task<Result<double>> ErrorTaskFuncOfDouble(int i) => Task.FromResult(DoubleInternalServerErrorResult);
     protected Task<IResult> ErrorTaskFunc(int i) => Task.FromResult((IResult)InternalServerErrorResult);
     
+    
     protected static Task<int> ThrowingValueTask() => throw new ShouldAssertException("Method should not have been called");
     protected static Task<int> ThrowingValueTask(int value) => throw new ShouldAssertException("Method should not have been called");
     protected static Task<Result<Result.NoContent>> ThrowingResultTask() => throw new ShouldAssertException("Method should not have been called");
@@ -39,8 +43,6 @@ public abstract class ResultTestBase
     protected static int ThrowingValue(int value1, double value2) => throw new ShouldAssertException("Method should not have been called");
     protected static Result<double> DoubleThrowingResult(int value) => throw new ShouldAssertException("Method should not have been called");
     protected static void ThrowingAction() => throw new ShouldAssertException("Method should not have been called");
-    protected static void ThrowingAction(int value) => throw new ShouldAssertException("Method should not have been called");
-    protected static Task ThrowingTask() => throw new ShouldAssertException("Method should not have been called");
     protected static Task ThrowingTask(int value) => throw new ShouldAssertException("Method should not have been called");
     protected static Task ThrowingTask(Issue issue) => throw new ShouldAssertException("Method should not have been called");
 }

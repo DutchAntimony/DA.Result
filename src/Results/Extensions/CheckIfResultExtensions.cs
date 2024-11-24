@@ -7,7 +7,7 @@ namespace DA.Results.Extensions;
 /// </summary>
 public static class CheckIfResultExtensions
 {
-    #region Predicate independend of TValue
+    #region Predicate independent of TValue
     /// <summary>
     /// Check this result with another result, but only if an initial predicate is true. 
     /// </summary>
@@ -135,7 +135,7 @@ public static class CheckIfResultExtensions
     }
     #endregion
     
-    #region Predicate dependend of TValue
+    #region Predicate dependent of TValue
     /// <summary>
     /// Check this result with another result, but only if an initial predicate is true. 
     /// </summary>

@@ -91,7 +91,7 @@ public class TapTests : ResultTestBase
         _testCounter.ShouldBe(before + 42);
     }
 
-    public void IncreaseCounterWithValue()
+    private void IncreaseCounterWithValue()
     {
         _testCounter++;
     }

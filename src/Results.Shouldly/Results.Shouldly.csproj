@@ -1,12 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net9.0</TargetFramework>
+        <TargetFramework>netstandard2.1</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>DA.Results.Shouldly</RootNamespace>
+        <LangVersion>Latest</LangVersion>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageOutputPath>C:\Users\romke\source\nupkgs</PackageOutputPath>
+
+        <PackageId>DA.Results.Shouldly</PackageId>
+        <Version>1.0.0</Version>
+        <Authors>Romke Veenstra</Authors>
+        <Description>DA.Results.Shouldly extents DA.Results with Shouldly assertions on the Results</Description>
+        <Copyright>Copyright © DutchAntimony 2024</Copyright>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <RepositoryUrl>https://github.com/DutchAntimony/DA.Result</RepositoryUrl>
+    </PropertyGroup>
+    
     <ItemGroup>
       <ProjectReference Include="..\Results\Results.csproj" />
     </ItemGroup>

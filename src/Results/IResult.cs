@@ -13,7 +13,7 @@ public interface IResult
     /// <summary>
     /// Should warnings be ignored?
     /// </summary>
-    public bool IgnoreWarnings { get; }
+    bool IgnoreWarnings { get; }
     
     /// <summary>
     /// Try to get the issue of the result, as an out parameter.

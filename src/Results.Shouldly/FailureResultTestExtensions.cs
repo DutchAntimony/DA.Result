@@ -14,7 +14,7 @@ public static class FailureResultTestExtensions
     /// </summary>
     /// <param name="result">Result where the assertion is called from.</param>
     /// <typeparam name="TIssue">The expected type of issue.</typeparam>
-    public static void ShouldHaveIssue<TIssue>(this IResult result)
+    public static void ShouldHaveIssue<TIssue>(this IResult? result)
         where TIssue : Issue
     {
         result.ShouldNotBeNull();
@@ -28,7 +28,7 @@ public static class FailureResultTestExtensions
     /// <param name="result">Result where the assertion is called from.</param>
     /// <param name="issue">The actual issue if indeed of type of the expected type.</param>
     /// <typeparam name="TIssue">The expected type of issue.</typeparam>
-    public static void ShouldHaveIssue<TIssue>(this IResult result, out TIssue issue)
+    public static void ShouldHaveIssue<TIssue>(this IResult? result, out TIssue issue)
         where TIssue : Issue
     {
         result.ShouldNotBeNull();
@@ -43,7 +43,7 @@ public static class FailureResultTestExtensions
     /// <param name="result">Result where the assertion is called from.</param>
     /// <param name="expectedMessage">The exact message expected.</param>
     /// <typeparam name="TIssue">The expected type of issue.</typeparam>
-    public static void ShouldHaveIssueAndMessage<TIssue>(this IResult result, string expectedMessage)
+    public static void ShouldHaveIssueAndMessage<TIssue>(this IResult? result, string expectedMessage)
         where TIssue : Issue
     {
         result.ShouldHaveIssue<TIssue>(out var issue);
@@ -56,7 +56,7 @@ public static class FailureResultTestExtensions
     /// <param name="result">Result where the assertion is called from.</param>
     /// <param name="expectedMessage">The part of the message that is expected.</param>
     /// <typeparam name="TIssue">The expected type of issue.</typeparam>
-    public static void ShouldHaveIssueAndContainMessage<TIssue>(this IResult result, string expectedMessage) 
+    public static void ShouldHaveIssueAndContainMessage<TIssue>(this IResult? result, string expectedMessage) 
         where TIssue : Issue
     {
         result.ShouldHaveIssue<TIssue>(out var issue);
@@ -69,10 +69,10 @@ public static class FailureResultTestExtensions
     /// </summary>
     /// <param name="result">Result where the assertion is called from.</param>
     /// <param name="expectedFailures">Collection of expected failures that must all be matched exactly.</param>
-    public static void ShouldHaveValidationErrorsEqualTo(this IResult result, params IEnumerable<ValidationFailure> expectedFailures)
+    public static void ShouldHaveValidationErrorsEqualTo(this IResult? result, params ValidationFailure[] expectedFailures)
     {
         result.ShouldHaveIssue<ValidationError>(out var issue);
-        issue.Failures.ShouldBeEquivalentTo(expectedFailures);
+        issue.Failures.ShouldBeEquivalentTo(expectedFailures.ToList());
     }
     
     /// <summary>
@@ -80,7 +80,7 @@ public static class FailureResultTestExtensions
     /// </summary>
     /// <param name="result">Result where the assertion is called from.</param>
     /// <param name="expectedFailureCount">Number of failures that validation error is expected to have.</param>
-    public static void ShouldHaveValidationErrorCount(this IResult result, int expectedFailureCount)
+    public static void ShouldHaveValidationErrorCount(this IResult? result, int expectedFailureCount)
     {
         result.ShouldHaveIssue<ValidationError>(out var issue);
         issue.Failures.Count.ShouldBe(expectedFailureCount);
@@ -91,7 +91,7 @@ public static class FailureResultTestExtensions
     /// </summary>
     /// <param name="result">Result where the assertion is called from.</param>
     /// <param name="expectedPropertyName">The name of the property that is expected to have a failure.</param>
-    public static void ShouldHaveValidationErrorForProperty(this IResult result, string expectedPropertyName)
+    public static void ShouldHaveValidationErrorForProperty(this IResult? result, string expectedPropertyName)
     {
         result.ShouldHaveIssue<ValidationError>(out var issue);
         issue.Failures.Any(failure => failure.Property == expectedPropertyName).ShouldBeTrue();
@@ -103,7 +103,7 @@ public static class FailureResultTestExtensions
     /// <param name="result">Result where the assertion is called from.</param>
     /// <param name="expectedPropertyName">The name of the property that is expected to have a failure.</param>
     /// <param name="expectedErrorMessage">The expected part of the content of the message of the failure of the provided property.</param>
-    public static void ShouldHaveValidationErrorForPropertyWithMessage(this IResult result, string expectedPropertyName, string expectedErrorMessage)
+    public static void ShouldHaveValidationErrorForPropertyWithMessage(this IResult? result, string expectedPropertyName, string expectedErrorMessage)
     {
         result.ShouldHaveIssue<ValidationError>(out var issue);
         issue.Failures.Any(failure => failure.Property == expectedPropertyName && failure.Message.Contains(expectedErrorMessage)).ShouldBeTrue();
@@ -114,7 +114,7 @@ public static class FailureResultTestExtensions
     /// </summary>
     /// <param name="result">Result where the assertion is called from.</param>
     /// <typeparam name="TException">The type of the exception that is expected.</typeparam>
-    public static void ShouldHaveExceptionOfType<TException>(this IResult result)
+    public static void ShouldHaveExceptionOfType<TException>(this IResult? result)
     {
         result.ShouldHaveIssue<InternalServerError>(out var issue);
         issue.Exceptions.ShouldContain(exception => exception.GetType() == typeof(TException));
@@ -126,7 +126,7 @@ public static class FailureResultTestExtensions
     /// <param name="result">Result where the assertion is called from.</param>
     /// <param name="expectedErrorMessage">The expected part of the content of the exception.</param>
     /// <typeparam name="TException">The type of the exception that is expected.</typeparam>
-    public static void ShouldHaveExceptionOfTypeWithMessage<TException>(this IResult result, string expectedErrorMessage)
+    public static void ShouldHaveExceptionOfTypeWithMessage<TException>(this IResult? result, string expectedErrorMessage)
     {
         result.ShouldHaveIssue<InternalServerError>(out var issue);
         issue.Exceptions.ShouldContain(exception => 
