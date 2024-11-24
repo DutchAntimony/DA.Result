@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>DA.Results.MinimalApi</RootNamespace>
@@ -13,7 +13,7 @@
 
         <PackageId>DA.Results.MinimalApi</PackageId>
         <Version>1.0.0</Version>
-        <Authors>Romke Veenstra</Authors>
+        <Authors>Dutch Antimony</Authors>
         <Description>DA.Results.MinimalApi extents DA.Results with conversions to HttpResult.IResult</Description>
         <Copyright>Copyright © DutchAntimony 2024</Copyright>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>

@@ -13,7 +13,7 @@ public static class SuccessResultTestExtensions
     /// Verifies that this result is a success result.
     /// </summary>
     /// <param name="result">Result where the assertion is called from.</param>
-    public static void ShouldBeSuccess(this IResult result)
+    public static void ShouldBeSuccess(this IResult? result)
     {
         result.ShouldNotBeNull();
         result.IsSuccess.ShouldBeTrue();
@@ -25,7 +25,7 @@ public static class SuccessResultTestExtensions
     /// <param name="result">Result where the assertion is called from.</param>
     /// <typeparam name="TValue">The type the result value has. </typeparam>
     /// <returns>The actual value if the provided expected type.</returns>
-    public static TValue ShouldBeSuccess<TValue>(this Result<TValue> result)
+    public static TValue ShouldBeSuccess<TValue>(this Result<TValue>? result)
     {
         result.ShouldNotBeNull();
         result.TryGetValue(out var actualValue).ShouldBeTrue();
@@ -38,7 +38,7 @@ public static class SuccessResultTestExtensions
     /// <param name="result">Result where the assertion is called from.</param>
     /// <param name="expectedValue">The value that is expected for this result to have.</param>
     /// <typeparam name="TValue">The type the result value has. </typeparam>
-    public static void ShouldBeSuccessWithValue<TValue>(this Result<TValue> result, TValue expectedValue)
+    public static void ShouldBeSuccessWithValue<TValue>(this Result<TValue>? result, TValue expectedValue)
     {
         result.ShouldNotBeNull();
         result.TryGetValue(out var actualValue).ShouldBeTrue();
@@ -51,7 +51,7 @@ public static class SuccessResultTestExtensions
     /// <param name="result">Result where the assertion is called from.</param>
     /// <param name="predicate">The condition the value this result has should have.</param>
     /// <typeparam name="TValue">The type the result value has. </typeparam>
-    public static void ShouldHaveValueThatSatisfies<TValue>(this Result<TValue> result, Predicate<TValue> predicate)
+    public static void ShouldHaveValueThatSatisfies<TValue>(this Result<TValue>? result, Predicate<TValue> predicate)
     {
         result.ShouldNotBeNull();
         result.TryGetValue(out var actualValue).ShouldBeTrue();

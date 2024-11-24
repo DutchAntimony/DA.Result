@@ -2,11 +2,14 @@ namespace DA.Results.Tests.Shouldly;
 
 public class SuccessResultTests : ResultTestBase
 {
+    private readonly IResult? _nullResult = null;
+    private readonly Result<int>? _intNullResult = null;
+    
     [Fact]
     public void ShouldBeSuccesTests()
     {
         ((IResult)SuccessResult).ShouldBeSuccess();
-        Should.Throw<ShouldAssertException>(() => ((IResult)null).ShouldBeSuccess());
+        Should.Throw<ShouldAssertException>(() => _nullResult.ShouldBeSuccess());
         Should.Throw<ShouldAssertException>(() => ((IResult)InternalServerErrorResult).ShouldBeSuccess());
     }
 
@@ -15,7 +18,7 @@ public class SuccessResultTests : ResultTestBase
     {
         var value = IntSuccessResult.ShouldBeSuccess();
         value.ShouldBe(42);
-        Should.Throw<ShouldAssertException>(() => ((Result<int>)null).ShouldBeSuccess());
+        Should.Throw<ShouldAssertException>(() => _intNullResult.ShouldBeSuccess());
         Should.Throw<ShouldAssertException>(() => InternalServerErrorResult.ShouldBeSuccess());
     }
     
@@ -23,7 +26,7 @@ public class SuccessResultTests : ResultTestBase
     public void ShouldBeSuccesWithValueTests()
     {
         IntSuccessResult.ShouldBeSuccessWithValue(42);
-        Should.Throw<ShouldAssertException>(() => ((Result<int>)null).ShouldBeSuccessWithValue(42));
+        Should.Throw<ShouldAssertException>(() => _intNullResult.ShouldBeSuccessWithValue(42));
         Should.Throw<ShouldAssertException>(() => IntInternalServerErrorResult.ShouldBeSuccessWithValue(42));
     }
     
@@ -31,7 +34,7 @@ public class SuccessResultTests : ResultTestBase
     public void ShouldBeSuccesWithPredicateTests()
     {
         IntSuccessResult.ShouldHaveValueThatSatisfies(x => x > 0);
-        Should.Throw<ShouldAssertException>(() => ((Result<int>)null).ShouldHaveValueThatSatisfies(x => x > 0));
+        Should.Throw<ShouldAssertException>(() => _intNullResult.ShouldHaveValueThatSatisfies(x => x > 0));
         Should.Throw<ShouldAssertException>(() => IntInternalServerErrorResult.ShouldHaveValueThatSatisfies(x => x > 0));
     }
 }

@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cf485a4-d8ac-4aa4-972e-12afb9b21ed9" name="Changes" comment="Complete rewrite of the Result philosophy.">
+    <list default="true" id="5cf485a4-d8ac-4aa4-972e-12afb9b21ed9" name="Changes" comment="Create Nuget packages for every project&#10;Added tests for Results.Shouldly">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DA.Result/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DA.Result/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Results.MinimalApi/Results.MinimalApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results.MinimalApi/Results.MinimalApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Results.Shouldly/FailureResultTestExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results.Shouldly/FailureResultTestExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Results.Shouldly/Results.Shouldly.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results.Shouldly/Results.Shouldly.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Results/IResult.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results/IResult.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Results/Issues/ConfirmationRequiredWarning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results/Issues/ConfirmationRequiredWarning.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Results.Shouldly/SuccessResultTestExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results.Shouldly/SuccessResultTestExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Results/NetStandardCompatibility.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Results/Results.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results/Results.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Results.Tests/Extensions/TapTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests/Extensions/TapTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Results.Tests/ResultTestBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests/ResultTestBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Results.Tests/Results.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests/Results.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Results.Tests/Shouldly/SuccessResultTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests/Shouldly/SuccessResultTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +44,12 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bce11045a85d9367c76472c1813c036fea548fffe53967188c8b2bc69feb/TypedResults.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e42fe784a0293ff7b921b9fd3bbaee33e71d4b24855342c8d66c6832ae2f6da/Ok.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Results.MinimalApi/HttpResultExtensions.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/test/Results.Tests.Old/BindTests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/romke/source/repos/DutchAntimony/DA.Result/src/Results.Shouldly/FailureResultTestExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/romke/source/repos/DutchAntimony/DA.Result/src/Results/Extensions/CheckIfResultExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/romke/source/repos/DutchAntimony/DA.Result/src/Results/IResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/romke/source/repos/DutchAntimony/DA.Result/src/Results/Issues/ConfirmationRequiredWarning.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/romke/source/repos/DutchAntimony/DA.Result/test/Results.Tests/Extensions/TapTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/romke/source/repos/DutchAntimony/DA.Result/test/Results.Tests/ResultTestBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../DA.X/Source/Library/TestLibrary/Results/ResultExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -68,7 +72,7 @@
   "keyToString": {
     "05570998-40ee-4827-b09d-0b94f9294602.executor": "Debug",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "d91bb601-522d-42a6-87f1-4eb0c18e703b.executor": "Debug",
+    "d91bb601-522d-42a6-87f1-4eb0c18e703b.executor": "Run",
     "db800222-05c6-4e2a-a76a-c108ba246cdb.executor": "Debug",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/romke/source/repos/DutchAntimony/DA.Result/DA.Result.sln",
@@ -81,7 +85,6 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="d91bb601-522d-42a6-87f1-4eb0c18e703b" />
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -94,7 +97,7 @@
       <workItem from="1732222548994" duration="83000" />
       <workItem from="1732270190062" duration="225000" />
       <workItem from="1732272320300" duration="24000" />
-      <workItem from="1732273460310" duration="31847000" />
+      <workItem from="1732273460310" duration="35920000" />
     </task>
     <task id="LOCAL-00001" summary="Complete rewrite of the Result philosophy.">
       <option name="closed" value="true" />
@@ -104,7 +107,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732445431069</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create Nuget packages for every project&#10;Added tests for Results.Shouldly">
+      <option name="closed" value="true" />
+      <created>1732463142547</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732463142547</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,7 +130,12 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 99% 8/619" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 0% 1168/1168" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+        </path>
+        <path>
+          <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
+          <item name="Total 0% 1168/1168" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Results 0% 1098/1098" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -141,6 +157,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Complete rewrite of the Result philosophy." />
-    <option name="LAST_COMMIT_MESSAGE" value="Complete rewrite of the Result philosophy." />
+    <MESSAGE value="Create Nuget packages for every project&#10;Added tests for Results.Shouldly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Nuget packages for every project&#10;Added tests for Results.Shouldly" />
   </component>
 </project>
