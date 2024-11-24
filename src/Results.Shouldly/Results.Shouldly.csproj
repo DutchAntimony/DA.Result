@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>DA.Results.Shouldly</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Results\Results.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Shouldly" Version="4.2.1" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <Using Include="Shouldly"/>
+        <Using Include="DA.Results"/>
+        <Using Include="DA.Results.Issues"/>
+    </ItemGroup>
+
+</Project>

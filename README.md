@@ -12,7 +12,7 @@ DA.Result draws inspiration from the following projects:
 
 ## Features
 
-- work in progress
+DA.Result works on a Result<T>, where T can optionally be a NoContent
 
 ## Syntax
 
