@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5cf485a4-d8ac-4aa4-972e-12afb9b21ed9" name="Changes" comment="Create Nuget packages for every project&#10;Added tests for Results.Shouldly">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.DA.Result/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DA.Result/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Results.MinimalApi/Results.MinimalApi.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results.MinimalApi/Results.MinimalApi.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Results.Shouldly/Results.Shouldly.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results.Shouldly/Results.Shouldly.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Results.Shouldly/SuccessResultTestExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results.Shouldly/SuccessResultTestExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Results/NetStandardCompatibility.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Results/Results.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/Results/Results.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Results.Tests/Results.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests/Results.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Results.Tests/Shouldly/SuccessResultTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/test/Results.Tests/Shouldly/SuccessResultTests.cs" afterDir="false" />
-    </list>
+    <list default="true" id="5cf485a4-d8ac-4aa4-972e-12afb9b21ed9" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +87,7 @@
       <workItem from="1732222548994" duration="83000" />
       <workItem from="1732270190062" duration="225000" />
       <workItem from="1732272320300" duration="24000" />
-      <workItem from="1732273460310" duration="35920000" />
+      <workItem from="1732273460310" duration="36216000" />
     </task>
     <task id="LOCAL-00001" summary="Complete rewrite of the Result philosophy.">
       <option name="closed" value="true" />
@@ -115,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732463142547</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Target net9.0, fixed some nullability issues.">
+      <option name="closed" value="true" />
+      <created>1732480246261</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732480246262</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,12 +128,12 @@
       <expand>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 0% 1168/1168" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 87% 78/619" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
         <path>
           <item name="rootNode" type="c53c71d1:RiderDotCoverCoverageTreeModel$RootNode" />
-          <item name="Total 0% 1168/1168" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
-          <item name="Results 0% 1098/1098" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Total 87% 78/619" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
+          <item name="Results 99% 8/549" type="8b8fad3a:RiderDotCoverCoverageTreeNode" />
         </path>
       </expand>
       <select />
@@ -158,6 +156,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Complete rewrite of the Result philosophy." />
     <MESSAGE value="Create Nuget packages for every project&#10;Added tests for Results.Shouldly" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Nuget packages for every project&#10;Added tests for Results.Shouldly" />
+    <MESSAGE value="Target net9.0, fixed some nullability issues." />
+    <option name="LAST_COMMIT_MESSAGE" value="Target net9.0, fixed some nullability issues." />
   </component>
 </project>
