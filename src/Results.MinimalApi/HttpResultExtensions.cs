@@ -9,7 +9,7 @@ public static class HttpResultExtensions
     {
         return !result.TryGetValue(out var value, out var issue)
             ? Microsoft.AspNetCore.Http.Results.Problem(issue.ToProblemDetails())
-            : result.GetValueType() == typeof(Result.NoContent)
+            : result is NoContentResult
                 ? Microsoft.AspNetCore.Http.Results.NoContent()
                 : Microsoft.AspNetCore.Http.Results.Ok(value);
     }

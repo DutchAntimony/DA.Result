@@ -15,7 +15,7 @@ public class ValidationErrorTests : ResultTestBase
         const string property = "Property";
         const string message = "Message";
 
-        Result<Result.NoContent> result = new ValidationError(property, message);
+        NoContentResult result = new ValidationError(property, message);
         result.ShouldHaveIssue<ValidationError>(out var issue);
         issue.GetMessage().ShouldContain($"{property}: {message}");
     }
@@ -23,7 +23,7 @@ public class ValidationErrorTests : ResultTestBase
     [Fact]
     public void ValidationError_ShouldBe_ConstructableFrom_ValidationFailureList()
     {
-        Result<Result.NoContent> result = new ValidationError(_failures);
+        NoContentResult result = new ValidationError(_failures);
         result.ShouldHaveIssue<ValidationError>();
     }
 

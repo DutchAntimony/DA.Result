@@ -32,12 +32,28 @@ public class ResultConstructionTests : ResultTestBase
     [Fact]
     public void Ok_Should_CreateSuccess_WithNoContentValueType()
     {
-        Result.Ok().GetValueType().ShouldBe(typeof(Result.NoContent));
+        Result.Ok().GetValueType().ShouldBe(typeof(NoContent));
     }
 
     [Fact]
     public void Ok_Should_CreateSuccess_WithCorrectValueType()
     {
         Result.Ok(true,true).GetValueType().ShouldBe(typeof(bool));
+    }
+
+    [Fact]
+    public void ResultWithoutContentTests()
+    {
+        var test1 = (NoContentResult)Result.Ok(3);
+        test1.ShouldBeOfType<NoContentResult>();
+        test1.IsSuccess.ShouldBeTrue();
+
+        var test2 = Result.Ok("abc").WithoutContent();
+        test2.ShouldBeOfType<NoContentResult>();
+        test2.IsSuccess.ShouldBeTrue();
+        
+        var test3 = Result.Fail<string>("failure").WithoutContent();
+        test3.ShouldBeOfType<NoContentResult>();
+        test3.ShouldHaveIssueAndMessage<InvalidOperationError>("failure");
     }
 }

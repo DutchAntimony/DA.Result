@@ -12,7 +12,7 @@
         <PackageOutputPath>C:\Users\romke\source\nupkgs</PackageOutputPath>
 
         <PackageId>DA.Results.MinimalApi</PackageId>
-        <Version>1.0.0</Version>
+        <Version>1.1.0</Version>
         <Authors>Dutch Antimony</Authors>
         <Description>DA.Results.MinimalApi extents DA.Results with conversions to HttpResult.IResult</Description>
         <Copyright>Copyright © DutchAntimony 2024</Copyright>

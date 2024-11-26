@@ -56,7 +56,7 @@ public class ValidationFailureCollectionTests : ResultTestBase
     public void ToResult_ShouldBecomeValidationError_WhenFailureResultCollectionIsAdded()
     {
         var validationFailureCollection = new ValidationFailureCollection();
-        validationFailureCollection.AddFrom((Result<Result.NoContent>)new ValidationError(_failures));
+        validationFailureCollection.AddFrom((NoContentResult)new ValidationError(_failures));
         var result = validationFailureCollection.ToResult();
         result.ShouldHaveIssue<ValidationError>(out var issue);
         issue.Title.ShouldBe("One or more validation errors occurred:");

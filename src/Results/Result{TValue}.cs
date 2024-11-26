@@ -8,7 +8,7 @@ namespace DA.Results;
 /// The result monad can either be a success with a value, or a failure with an <see cref="Issue"/>
 /// </summary>
 /// <typeparam name="TValue">The type this monad is wrapping.</typeparam>
-public sealed record Result<TValue> : IResult
+public record Result<TValue> : IResult
 {
     private readonly TValue? _value;
     private readonly Issue? _issue;
@@ -60,8 +60,16 @@ public sealed record Result<TValue> : IResult
         return !IsSuccess;
     }
     
+    /// <summary>
+    /// Drop the value information from the result
+    /// </summary>
+    /// <returns>A new instance of a <see cref="NoContentResult"/></returns>
+    public NoContentResult WithoutContent() => 
+        TryGetIssue(out var issue) ? new NoContentResult(issue) : new NoContentResult(IgnoreWarnings);
+    
     public static implicit operator Result<TValue>(Issue issue) => new(issue);
     public static implicit operator Result<TValue>(TValue value) => new(value);
+    public static explicit operator NoContentResult(Result<TValue> result) => result.WithoutContent();
     
     /// <inheritdoc />
     public Type GetValueType() => typeof(TValue);

@@ -35,14 +35,14 @@ public class TapTests : ResultTestBase
     public void Tap_Should_NotCallAction_OnFailureResult()
     {
         var result = InternalServerErrorResult.Tap(() => throw new ShouldAssertException("Should not call action"));
-        result.ShouldBeOfType<Result<Result.NoContent>>();
+        result.ShouldBeOfType<NoContentResult>();
     }
     
     [Fact]
     public void Tap_Should_NotCallFunction_OnFailureResult()
     {
         var result = InternalServerErrorResult.Tap(() => ThrowingValue());
-        result.ShouldBeOfType<Result<Result.NoContent>>();
+        result.ShouldBeOfType<NoContentResult>();
     }
     
     [Fact]

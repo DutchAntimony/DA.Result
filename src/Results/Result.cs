@@ -12,7 +12,7 @@ public static class Result
     /// </summary>
     /// <param name="ignoreWarnings">Should any warnings be ignored (true) or treated as errors (false, default)</param>
     /// <returns>New instance of a Result with as type parameter NoContent.</returns>
-    public static Result<NoContent> Ok(bool ignoreWarnings = false) => new(NoContent.Instance, ignoreWarnings);
+    public static NoContentResult Ok(bool ignoreWarnings = false) => new(ignoreWarnings);
    
     /// <summary>
     /// Create a new Ok (Success) result with the provided value.
@@ -35,7 +35,7 @@ public static class Result
     /// </summary>
     /// <param name="message">The message of the failure.</param>
     /// <returns>New instance of a Failing Result with an <see cref="InvalidOperationError"/> as issue.</returns>
-    public static Result<NoContent> Fail(string message) => new InvalidOperationError(message);
+    public static NoContentResult Fail(string message) => new InvalidOperationError(message);
     
     /// <summary>
     /// Create a new failing result for a specific TValue with the provided failing message.
@@ -55,7 +55,7 @@ public static class Result
     /// <param name="warning">The warning that has occured.</param>
     /// <param name="ignoreWarnings">Flag to indicate if warnings should be ignored.</param>
     /// <returns>New instance of a Result with as type parameter NoContent.</returns>
-    public static Result<NoContent> Warn(Warning warning, bool ignoreWarnings) => 
+    public static NoContentResult Warn(Warning warning, bool ignoreWarnings) => 
         ignoreWarnings ? Ok(ignoreWarnings) : warning;
     
     /// <summary>
@@ -68,17 +68,4 @@ public static class Result
     /// <returns>New instance of a Result with as type parameter NoContent.</returns>
     public static Result<TValue> Warn<TValue>(Warning warning, TValue value,  bool ignoreWarnings) => 
         ignoreWarnings ? Ok(value, ignoreWarnings) : warning;
-    
-    /// <summary>
-    /// A Result with only information if something happened and no (actual) value.
-    /// </summary>
-    public record NoContent
-    {
-        private NoContent() { /* No new instances of the NoContent class can be made */ }
-        
-        /// <summary>
-        /// The only instance of NoContent that can ever exist.
-        /// </summary>
-        public static NoContent Instance => new();
-    }
 }

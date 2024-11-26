@@ -15,7 +15,7 @@ public class IssueTests : ResultTestBase
     public void InternalServerError_Should_BeCreatedImplicitlyFromException()
     {
         InternalServerError ise = new Exception("Message");
-        Result<Result.NoContent> result = ise;
+        NoContentResult result = ise;
         result.ShouldHaveIssue<InternalServerError>(out var issue);
         issue.Title.ShouldBe("One or more errors occurred:");
         issue.StatusCode.ShouldBe(500);
@@ -27,7 +27,7 @@ public class IssueTests : ResultTestBase
     [Fact]
     public void InvalidOperationError_ShouldBe_ConfiguredCorrectly()
     {
-        Result<Result.NoContent> result = new InvalidOperationError("Message");
+        NoContentResult result = new InvalidOperationError("Message");
         result.ShouldHaveIssue<InvalidOperationError>(out var issue);
         issue.Title.ShouldBe("Something was wrong with the request:");
         issue.StatusCode.ShouldBe(400);
@@ -38,7 +38,7 @@ public class IssueTests : ResultTestBase
     public void UnmodifiedWarning_ShouldBe_ConstructedUsingAProperty()
     {
         var type = typeof(ResultTestBase);
-        Result<Result.NoContent> result = new UnmodifiedWarning(type);
+        NoContentResult result = new UnmodifiedWarning(type);
         result.ShouldHaveIssue<UnmodifiedWarning>(out var issue);
         issue.Types.ShouldNotBeEmpty();
         issue.Types.Count().ShouldBe(1);

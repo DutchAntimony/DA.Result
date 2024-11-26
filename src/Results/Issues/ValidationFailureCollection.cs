@@ -25,7 +25,7 @@ public sealed class ValidationFailureCollection
         return this;
     }
 
-    public Result<Result.NoContent> ToResult(bool ignoreWarnings = false)
+    public NoContentResult ToResult(bool ignoreWarnings = false)
     {
         if (_existingNonValidationFailure is not null)
             return _existingNonValidationFailure;

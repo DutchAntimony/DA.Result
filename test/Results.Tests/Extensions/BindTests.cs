@@ -45,8 +45,8 @@ public class BindTests : ResultTestBase
         (await successTask.Bind(_ => IntInternalServerErrorResult)).ShouldHaveIssue<InternalServerError>();
         (await IntSuccessResult.BindAsync(() => errorTask)).ShouldHaveIssue<InternalServerError>();
         (await IntSuccessResult.BindAsync(ErrorTaskFuncOfDouble)).ShouldHaveIssue<InternalServerError>();
-        (await errorTask.BindAsync(ThrowingResultTask)).ShouldHaveIssue<InternalServerError>();
-        (await IntInternalServerErrorResult.BindAsync(ThrowingResultTask)).ShouldHaveIssue<InternalServerError>();
+        (await errorTask.BindAsync(ThrowingIntResultTask)).ShouldHaveIssue<InternalServerError>();
+        (await IntInternalServerErrorResult.BindAsync(ThrowingIntResultTask)).ShouldHaveIssue<InternalServerError>();
         (await IntInternalServerErrorResult.BindAsync(_ => ThrowingIntResultTask())).ShouldHaveIssue<InternalServerError>();
         (await successTask.BindAsync(() => errorTask)).ShouldHaveIssue<InternalServerError>();
         (await successTask.BindAsync(ErrorTaskFuncOfDouble)).ShouldHaveIssue<InternalServerError>();
